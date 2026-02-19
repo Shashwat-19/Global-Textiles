@@ -1,0 +1,33 @@
+[
+  {
+    "type": "image",
+    "src": "images/embroidery.jpg",
+    "caption": "Zari and sequins embroidery on georgette",
+    "alt": "Close-up embroidery work",
+    "category": "craft"
+  },
+  {
+    "type": "image",
+    "src": "images/nylon.jpg",
+    "caption": "High-tenacity nylon twill",
+    "alt": "Nylon fabric roll",
+    "category": "fabric"
+  },
+  {
+    "type": "image",
+    "src": "images/viscose.jpg",
+    "caption": "Drapey viscose for dresses",
+    "alt": "Viscose fabric",
+    "category": "fabric"
+  },
+  {
+    "type": "video",
+    "src": "videos/loom.mp4",
+    "poster": "images/hero-poster.jpg",
+    "caption": "Power loom weaving in progress",
+    "category": "video"
+  }
+]
+
+
+

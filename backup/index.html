@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Textiles - Premium Fabric & Garment Suppliers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        display: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            700: '#44403c',
+                            800: '#292524',
+                            900: '#1c1917',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased selection:bg-amber-600 selection:text-white">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex flex-col group">
+                <span class="text-2xl font-display font-bold text-stone-900 tracking-tight leading-none group-hover:text-amber-700 transition-colors">M.P Textile Agency</span>
+                <span class="text-[0.65rem] md:text-xs text-stone-500 font-medium tracking-widest uppercase mt-1 group-hover:text-amber-600 transition-colors">Textile consultancy and procurement agency</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-stone-600 hover:text-amber-700 font-medium transition-colors text-sm uppercase tracking-wide">About</a>
+                <a href="#products" class="text-stone-600 hover:text-amber-700 font-medium transition-colors text-sm uppercase tracking-wide">Products</a>
+                <a href="#gallery" class="text-stone-600 hover:text-amber-700 font-medium transition-colors text-sm uppercase tracking-wide">Gallery</a>
+                <a href="#contact" class="px-5 py-2.5 bg-stone-900 text-white rounded-full text-sm font-medium hover:bg-amber-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Contact Us</a>
+            </nav>
+            <button id="mobile-menu-button" type="button" class="md:hidden text-stone-800 focus:outline-none" aria-label="Toggle navigation menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-xl border-t border-stone-100 absolute w-full">
+            <div class="px-6 py-6 space-y-4">
+                <a href="#about" class="block text-stone-600 hover:text-amber-700 font-medium text-lg">About</a>
+                <a href="#products" class="block text-stone-600 hover:text-amber-700 font-medium text-lg">Products</a>
+                <a href="#gallery" class="block text-stone-600 hover:text-amber-700 font-medium text-lg">Gallery</a>
+                <a href="#contact" class="block text-stone-600 hover:text-amber-700 font-medium text-lg">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg min-h-screen flex items-center justify-center text-white relative overflow-hidden">
+            <div class="absolute inset-0 hero-overlay"></div>
+            <div class="container mx-auto px-6 relative z-10 text-center">
+                <div class="reveal visible"> <!-- Added visible class for initial load if JS doesn't catch it immediately, though JS intersection observer handles it -->
+                    <span class="text-amber-400 font-medium tracking-widest uppercase text-sm mb-4 block">Est. 2010 • Surat, Gujarat</span>
+                    <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">The Fabric of <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500">Excellence</span></h1>
+                    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 text-stone-200 font-light leading-relaxed">
+                        Bridging the gap between Surat’s finest craftsmanship and the world. 
+                        We deliver premium quality fabrics with unmatched reliability and style.
+                    </p>
+                    <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                        <a href="#products" class="px-8 py-4 bg-amber-600 text-white font-semibold rounded-full hover:bg-amber-700 transition duration-300 shadow-lg hover:shadow-amber-600/30 transform hover:-translate-y-1">Explore Collection</a>
+                        <a href="#contact" class="px-8 py-4 bg-transparent border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition duration-300 backdrop-blur-sm">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce opacity-70 hidden md:block">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-24 bg-white overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="reveal relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-amber-100 rounded-full z-0 opacity-50"></div>
+                        <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-stone-100 rounded-full z-0 opacity-50"></div>
+                        <img src="./assets/main.jpeg" alt="Textile Agency Office" class="relative z-10 rounded-2xl shadow-2xl w-full transform hover:scale-[1.02] transition duration-500 object-cover h-[500px]">
+                    </div>
+                    <div class="reveal">
+                        <span class="text-amber-600 font-semibold uppercase tracking-wider text-sm mb-2 block">Our Story</span>
+                        <h2 class="font-display text-4xl md:text-5xl font-bold text-stone-900 mb-6 leading-tight">Weaving a Legacy <br>of <span class="text-amber-700 italic">Quality</span></h2>
+                        <p class="text-stone-600 mb-6 leading-relaxed text-lg">With a rich heritage in the textile industry, <strong class="text-stone-800">M.P Textile Agency</strong> stands as a pillar of reliability and innovation. We don't just supply fabric; we curate experiences. By bridging the gap between Surat's premier manufacturers and discerning global clients, we ensure that every yard of fabric tells a story of excellence.</p>
+                        <p class="text-stone-600 mb-8 leading-relaxed text-lg">Our commitment goes beyond commerce. We are dedicated to sustainable practices, ethical sourcing, and fostering long-term partnerships that empower our clients to create their best work.</p>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="border-l-4 border-amber-600 pl-4">
+                                <p class="text-3xl font-display font-bold text-stone-900">15+</p>
+                                <p class="text-sm text-stone-500 uppercase tracking-wide">Years Experience</p>
+                            </div>
+                            <div class="border-l-4 border-stone-300 pl-4">
+                                <p class="text-3xl font-display font-bold text-stone-900">500+</p>
+                                <p class="text-sm text-stone-500 uppercase tracking-wide">Happy Clients</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-us" class="py-24 bg-stone-50 relative">
+             <!-- Background Pattern -->
+             <div class="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
+                <svg width="200" height="200" viewBox="0 0 100 100" fill="currentColor" class="text-stone-900">
+                    <pattern id="dot-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <circle cx="2" cy="2" r="2"></circle>
+                    </pattern>
+                    <rect width="100" height="100" fill="url(#dot-pattern)"></rect>
+                </svg>
+             </div>
+
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-20 reveal">
+                    <span class="text-amber-600 font-semibold uppercase tracking-wider text-sm mb-2 block">Why Choose Us</span>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-stone-900">Partner with Excellence</h2>
+                    <p class="text-stone-600 mt-4 max-w-2xl mx-auto text-lg">Experience the distinct advantages of working with an industry leader committed to your success.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-10">
+                    <!-- Feature 1 -->
+                    <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 reveal border border-stone-100 group">
+                        <div class="bg-amber-50 text-amber-600 rounded-2xl h-16 w-16 flex items-center justify-center mb-8 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-stone-900 font-display">Unmatched Quality</h3>
+                        <p class="text-stone-600 leading-relaxed">We rigorously vet every manufacturer and inspect every lot. Our quality control is your peace of mind, ensuring zero defects.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 reveal border border-stone-100 group">
+                        <div class="bg-amber-50 text-amber-600 rounded-2xl h-16 w-16 flex items-center justify-center mb-8 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-stone-900 font-display">Vast Supplier Network</h3>
+                        <p class="text-stone-600 leading-relaxed">Gain access to an exclusive network of over 200+ mills. From rare heritage weaves to modern synthetics, if it exists, we source it.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 reveal border border-stone-100 group">
+                        <div class="bg-amber-50 text-amber-600 rounded-2xl h-16 w-16 flex items-center justify-center mb-8 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300">
+                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-stone-900 font-display">Swift Logistics</h3>
+                        <p class="text-stone-600 leading-relaxed">Time is money. Our optimized logistics network ensures your orders are processed, packed, and delivered with speed and precision.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-20 reveal">
+                    <span class="text-amber-600 font-semibold uppercase tracking-wider text-sm mb-2 block">Our Collection</span>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-stone-900">Curated for Excellence</h2>
+                    <p class="text-stone-600 mt-4 max-w-2xl mx-auto text-lg">From raw materials to finished masterpieces, discover our diverse range of textile solutions.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Product Card 1 -->
+                    <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 reveal cursor-pointer h-[450px]">
+                        <img src="./assets/fabric.jpeg" alt="Fabrics" class="absolute inset-0 w-full h-full object-cover zoom-image">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="font-display text-2xl font-bold text-white mb-2">Fine Fabrics</h3>
+                            <div class="h-0 group-hover:h-auto overflow-hidden transition-all duration-500 opacity-0 group-hover:opacity-100">
+                                <p class="text-stone-200 text-sm leading-relaxed mb-4">Top-tier dyed fabrics including Polyester and Viscose. Perfect for industrial use and premium fashion.</p>
+                                <a href="#contact" class="inline-block px-6 py-2 bg-white/10 backdrop-blur-md border border-white/30 rounded-full text-white text-sm hover:bg-white hover:text-stone-900 transition-colors duration-300">Inquire Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 reveal cursor-pointer h-[450px] delay-100">
+                        <img src="./assets/saree.jpeg" alt="Sarees" class="absolute inset-0 w-full h-full object-cover zoom-image">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="font-display text-2xl font-bold text-white mb-2">Exquisite Sarees</h3>
+                             <div class="h-0 group-hover:h-auto overflow-hidden transition-all duration-500 opacity-0 group-hover:opacity-100">
+                                <p class="text-stone-200 text-sm leading-relaxed mb-4">Intricate weaves and bridal collections. Featuring velvet, silk blends, and rich georgettes.</p>
+                                <a href="#contact" class="inline-block px-6 py-2 bg-white/10 backdrop-blur-md border border-white/30 rounded-full text-white text-sm hover:bg-white hover:text-stone-900 transition-colors duration-300">Inquire Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 reveal cursor-pointer h-[450px] delay-200">
+                        <img src="./assets/suit.jpeg" alt="Kurtis" class="absolute inset-0 w-full h-full object-cover zoom-image">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="font-display text-2xl font-bold text-white mb-2">Designer Kurtis</h3>
+                             <div class="h-0 group-hover:h-auto overflow-hidden transition-all duration-500 opacity-0 group-hover:opacity-100">
+                                <p class="text-stone-200 text-sm leading-relaxed mb-4">Contemporary styles meeting traditional comfort. Available in stitched and semi-stitched variants.</p>
+                                <a href="#contact" class="inline-block px-6 py-2 bg-white/10 backdrop-blur-md border border-white/30 rounded-full text-white text-sm hover:bg-white hover:text-stone-900 transition-colors duration-300">Inquire Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 reveal cursor-pointer h-[450px] delay-300">
+                        <img src="./assets/shirting.jpeg" alt="Shirting" class="absolute inset-0 w-full h-full object-cover zoom-image">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="font-display text-2xl font-bold text-white mb-2">Premium Shirting</h3>
+                             <div class="h-0 group-hover:h-auto overflow-hidden transition-all duration-500 opacity-0 group-hover:opacity-100">
+                                <p class="text-stone-200 text-sm leading-relaxed mb-4">Crisp cottons and durable blends for the modern gentleman. Digital and mill prints available.</p>
+                                <a href="#contact" class="inline-block px-6 py-2 bg-white/10 backdrop-blur-md border border-white/30 rounded-full text-white text-sm hover:bg-white hover:text-stone-900 transition-colors duration-300">Inquire Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-24 bg-stone-900 text-white relative overflow-hidden">
+            <!-- Decorative Elements -->
+            <div class="absolute top-0 left-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-stone-700/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-20 reveal">
+                    <span class="text-amber-500 font-semibold uppercase tracking-wider text-sm mb-2 block">Visual Stories</span>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-white">The Art of Textiles</h2>
+                    <p class="text-stone-400 mt-4 max-w-2xl mx-auto text-lg">A glimpse into our world of color, texture, and design. Click to explore.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+                     <!-- Gallery Item 1 (Wide) -->
+
+                    <!-- Gallery Item 5 (Uploaded 1) -->
+                    <div class="md:col-span-1 row-span-1 gallery-item cursor-pointer overflow-hidden rounded-2xl shadow-xl group relative reveal delay-100" data-type="image" data-src="./assets/gallery_upload_1.jpg">
+                        <img src="./assets/gallery_upload_1.jpg" alt="Exclusive Collection" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                            <h3 class="text-xl font-display font-bold text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Exclusive Collection</h3>
+                             <p class="text-stone-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Hand-picked designs for the elite.</p>
+                        </div>
+                    </div>
+
+                     <!-- Gallery Item 6 (Uploaded 2 - Wide) -->
+                    <div class="md:col-span-2 row-span-1 gallery-item cursor-pointer overflow-hidden rounded-2xl shadow-xl group relative reveal delay-200" data-type="image" data-src="./assets/gallery_upload_2.jpg">
+                        <img src="./assets/gallery_upload_2.jpg" alt="Premium Textures" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                            <h3 class="text-2xl font-display font-bold text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Premium Textures</h3>
+                             <p class="text-stone-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Feel the difference in every thread.</p>
+                        </div>
+                    </div>
+
+                     <!-- Gallery Item 7 (Uploaded 3) -->
+                    <div class="md:col-span-1 row-span-1 gallery-item cursor-pointer overflow-hidden rounded-2xl shadow-xl group relative reveal delay-300" data-type="image" data-src="./assets/gallery_upload_3.jpg">
+                        <img src="./assets/gallery_upload_3.jpg" alt="Artisanal Weaves" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                            <h3 class="text-xl font-display font-bold text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Artisanal Weaves</h3>
+                             <p class="text-stone-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Traditional techniques, modern appeal.</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 8 (Stock - Cloths related) -->
+                    <div class="md:col-span-1 row-span-1 md:row-span-1 gallery-item cursor-pointer overflow-hidden rounded-2xl shadow-xl group relative reveal delay-400" data-type="image" data-src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=800&q=80">
+                        <img src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=800&q=80" alt="Vibrant Textiles" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                            <h3 class="text-xl font-display font-bold text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Vibrant Textiles</h3>
+                             <p class="text-stone-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Colors that bring your vision to life.</p>
+                        </div>
+                        <div class="md:col-span-1 row-span-1 md:row-span-1 gallery-item cursor-pointer overflow-hidden rounded-2xl shadow-xl group relative reveal delay-400" data-type="image" data-src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=800&q=80">
+                            <img src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=800&q=80" alt="Vibrant Textiles" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                                <h3 class="text-xl font-display font-bold text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Vibrant Textiles</h3>
+                                 <p class="text-stone-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Colors that bring your vision to life.</p>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-stone-50 rounded-full z-0"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-amber-50 rounded-full z-0"></div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-20 reveal">
+                     <span class="text-amber-600 font-semibold uppercase tracking-wider text-sm mb-2 block">Get in Touch</span>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-stone-900">Let's Create Together</h2>
+                    <p class="text-stone-600 mt-4 max-w-2xl mx-auto text-lg">We're here to answer your questions, provide quotes, and fulfill your textile needs.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-16 items-start">
+                    <!-- Map -->
+                    <div class="reveal rounded-3xl overflow-hidden shadow-2xl h-full min-h-[500px] border-4 border-white transform hover:scale-[1.01] transition-transform duration-500">
+                        <iframe class="contact-map-iframe grayscale hover:grayscale-0 transition-all duration-700" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119064.42041935905!2d72.73989390235316!3d21.15923984381882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat%2C%20India!5e0!3m2!1sen!2sus!4v1663712211993!5m2!1sen!2sus" width="100%" height="100%" allowfullscreen="" loading="lazy" title="Map showing Surat, Gujarat"></iframe>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="bg-stone-50 p-12 rounded-3xl shadow-lg border border-stone-100 reveal">
+                        <h3 class="text-3xl font-display font-bold mb-8 text-stone-900">Contact Information</h3>
+                        
+                        <div class="space-y-8">
+                            <div class="flex items-start space-x-6 group">
+                                <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center flex-shrink-0 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300 text-amber-600">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg text-stone-900 mb-1">Phone Number</h4>
+                                    <a href="tel:+919265758481" class="block text-stone-600 hover:text-amber-700 transition font-medium">+91 92657 58481</a>
+                                    <a href="tel:+919374721184" class="block text-stone-600 hover:text-amber-700 transition font-medium">+91 93747 21184</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-6 group">
+                                <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center flex-shrink-0 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300 text-amber-600">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg text-stone-900 mb-1">Email Address</h4>
+                                    <a href="mailto:Mptextilesurat@gmail.com" class="text-stone-600 hover:text-amber-700 transition font-medium">Mptextilesurat@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-6 group">
+                                <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center flex-shrink-0 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300 text-amber-600">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg text-stone-900 mb-1">Our Office</h4>
+                                    <p class="text-stone-600 font-medium leading-relaxed">C-1402/03 Kohinoor Textile Market<br>Near Ambaji Market, Ring Road,<br>Surat 395002</p>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="mt-12 pt-8 border-t border-stone-200">
+                            <h4 class="font-bold text-lg text-stone-900 mb-4">Business Hours</h4>
+                            <ul class="text-stone-600 space-y-2">
+                                <li class="flex justify-between"><span>Monday - Saturday:</span> <span class="font-medium">9:00 AM - 8:00 PM</span></li>
+                                <li class="flex justify-between"><span>Sunday:</span> <span class="font-medium text-amber-600">Closed</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="bg-stone-900 py-24 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20 bg-[url('./assets/fabric.jpeg')] bg-cover bg-center mix-blend-overlay"></div>
+            <div class="container mx-auto px-6 text-center reveal relative z-10">
+                <h2 class="font-display text-4xl md:text-6xl font-bold text-white mb-6">Start Your Next Project</h2>
+                <p class="text-stone-300 mb-10 max-w-2xl mx-auto text-xl">Let's weave success together. Contact us today to discuss your requirements.</p>
+                <a href="#contact" class="inline-block bg-amber-600 text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-amber-700 transition-all transform hover:scale-105 shadow-2xl hover:shadow-amber-600/50">Contact Us Today</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16 border-t border-stone-800">
+        <div class="container mx-auto px-6">
+             <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <a href="#" class="text-2xl font-display font-bold text-white mb-6 block">M.P Textile</a>
+                    <p class="text-stone-400 leading-relaxed text-sm">Your trusted partner for premium fabrics and garments. Delivering quality since 2010.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-stone-400">
+                        <li><a href="#about" class="hover:text-amber-500 transition">About Us</a></li>
+                        <li><a href="#products" class="hover:text-amber-500 transition">Our Products</a></li>
+                        <li><a href="#gallery" class="hover:text-amber-500 transition">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                     <h4 class="font-bold text-lg mb-6">Legal</h4>
+                    <ul class="space-y-4 text-stone-400">
+                        <li><a href="#" class="hover:text-amber-500 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Connect</h4>
+                     <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center hover:bg-amber-600 transition-colors group" aria-label="Facebook">
+                            <svg class="w-5 h-5 text-stone-400 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.791-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center hover:bg-amber-600 transition-colors group" aria-label="Twitter">
+                             <svg class="w-5 h-5 text-stone-400 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                         <a href="#" class="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center hover:bg-amber-600 transition-colors group" aria-label="Instagram">
+                            <svg class="w-5 h-5 text-stone-400 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.441 16.892c-2.102.144-6.784.144-8.883 0C2.277 16.825 1.419 15.143 1.419 12s.858-4.825 1.699-4.891c2.099-.144 6.782-.144 8.883 0 1.699.115 2.558 1.796 2.558 4.891s-.859 4.825-1.699 4.891zM9.99 9.388v5.225L15.004 12 9.99 9.388z"/></svg>
+                        </a>
+                     </div>
+                </div>
+            </div>
+            
+             <div class="border-t border-stone-800 pt-8 text-center flex flex-col md:flex-row justify-center items-center">
+                <p class="text-stone-500 text-sm">© 2024 Global Textiles. All Rights Reserved.</p>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="fixed inset-0 bg-black/80 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-4xl max-h-full w-full h-auto relative overflow-hidden">
+            <button id="modal-close" class="absolute top-2 right-2 text-white bg-black/50 rounded-full p-2 z-10" aria-label="Close gallery modal">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div id="modal-content" class="w-full h-full flex items-center justify-center">
+                <!-- Content will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
