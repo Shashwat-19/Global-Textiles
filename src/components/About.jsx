@@ -10,14 +10,24 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative"
+            className="relative flex items-center justify-center min-h-[500px] rounded-2xl overflow-hidden shadow-2xl"
           >
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-amber-100 rounded-full z-0 opacity-50 mix-blend-multiply filter blur-xl"></div>
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-stone-100 rounded-full z-0 opacity-50 mix-blend-multiply filter blur-xl"></div>
+            {/* Fabric collage background */}
+            <div className="absolute inset-0 grid grid-cols-3 grid-rows-3">
+              <div className="col-span-2 row-span-2 bg-cover bg-center" style={{ backgroundImage: "url('/assets/fabric.jpeg')" }} />
+              <div className="bg-cover bg-center" style={{ backgroundImage: "url('/assets/saree.jpeg')" }} />
+              <div className="bg-cover bg-center" style={{ backgroundImage: "url('/assets/imported-fabrics.png')" }} />
+              <div className="bg-cover bg-center" style={{ backgroundImage: "url('/assets/position-prints.png')" }} />
+              <div className="bg-cover bg-center" style={{ backgroundImage: "url('/assets/dupattas.png')" }} />
+              <div className="col-span-2 bg-cover bg-center" style={{ backgroundImage: "url('/assets/laces.png')" }} />
+              <div className="bg-cover bg-center" style={{ backgroundImage: "url('/assets/suit.jpeg')" }} />
+              <div className="bg-cover bg-center" style={{ backgroundImage: "url('/assets/shirting.jpeg')" }} />
+            </div>
+            <div className="absolute inset-0 bg-stone-900/75" />
             <img 
-              src="/assets/main.jpeg" 
-              alt="Textile Agency Office" 
-              className="relative z-10 rounded-2xl shadow-2xl w-full h-[500px] object-cover transform hover:scale-[1.02] transition duration-500"
+              src="/assets/hero-bg.png" 
+              alt="M.P Textile Agency" 
+              className="relative z-10 w-full max-w-md px-8 object-contain"
             />
           </motion.div>
           
