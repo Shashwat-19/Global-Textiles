@@ -5,17 +5,19 @@ const features = [
   {
     icon: Award,
     title: "Unmatched Quality",
-    description: "We rigorously vet every manufacturer and inspect every lot. Our quality control is your peace of mind, ensuring zero defects."
+    description: "We rigorously vet every manufacturer. Our quality control is your peace of mind, ensuring zero defects."
   },
   {
     icon: Globe,
     title: "Vast Supplier Network",
-    description: "Gain access to an exclusive network of over 200+ mills. From rare heritage weaves to modern synthetics, if it exists, we source it."
+    description: "Gain access to an exclusive network of over 200+ mills. From rare heritage weaves to modern synthetics, ",
+    descriptionEnd: "if it exists, we source it."
   },
   {
     icon: Truck,
     title: "Swift Logistics",
-    description: "Time is money. Our optimized logistics network ensures your orders are processed, packed, and delivered with speed and precision."
+    description: "From Surat to your doorstep—we coordinate warehousing, customs, and last-mile delivery so your consignments reach you ",
+    descriptionEnd: "on time, every time."
   }
 ];
 
@@ -61,7 +63,12 @@ const WhyChooseUs = () => {
                 <feature.icon size={32} strokeWidth={1.5} />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-stone-900 font-display">{feature.title}</h3>
-              <p className="text-stone-600 leading-relaxed">{feature.description}</p>
+              <p className="text-stone-600 leading-relaxed">
+                {feature.description}
+                {feature.descriptionEnd ? (
+                  <span className="font-bold underline">{feature.descriptionEnd}</span>
+                ) : null}
+              </p>
             </motion.div>
           ))}
         </div>
