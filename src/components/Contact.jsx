@@ -27,10 +27,10 @@ const Contact = () => {
             >
                 <iframe 
                     className="w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119064.42041935905!2d72.73989390235316!3d21.15923984381882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat%2C%20India!5e0!3m2!1sen!2sus!4v1663712211993!5m2!1sen!2sus" 
+                    src="https://maps.google.com/maps?q=C-1402%2F03+Kohinoor+Textile+Market%2C+Near+Ambaji+Market%2C+Ring+Road%2C+Surat+395002&output=embed&zoom=17" 
                     allowFullScreen="" 
                     loading="lazy" 
-                    title="Map showing Surat, Gujarat"
+                    title="M.P Textile Agency - C-1402/03 Kohinoor Textile Market, Surat"
                 ></iframe>
             </motion.div>
 
