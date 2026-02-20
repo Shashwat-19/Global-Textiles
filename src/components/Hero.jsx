@@ -20,9 +20,9 @@ const Hero = () => {
       >
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/assets/main.jpeg')" }}
+          style={{ backgroundImage: "url('/assets/hero-bg.png')" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80" />
+        <div className="absolute inset-0 bg-black/50" />
       </motion.div>
 
       {/* Content */}

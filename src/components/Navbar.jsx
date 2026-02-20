@@ -28,13 +28,12 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <a href="#" className="flex flex-col group">
-          <span className="text-2xl font-display font-bold text-stone-900 tracking-tight leading-none group-hover:text-amber-700 transition-colors">
-            M.P Textile Agency
-          </span>
-          <span className="text-[0.65rem] md:text-xs text-stone-500 font-medium tracking-widest uppercase mt-1 group-hover:text-amber-600 transition-colors">
-            Textile consultancy and procurement agency
-          </span>
+        <a href="#" className="flex items-center group">
+          <img
+            src="/assets/logo.png"
+            alt="M.P Textile Agency"
+            className="h-10 md:h-12 w-auto object-contain"
+          />
         </a>
 
         {/* Desktop Nav */}
