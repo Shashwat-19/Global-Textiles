@@ -5,13 +5,13 @@ const products = [
     id: 1,
     title: "Fine Fabrics",
     image: "/assets/fabric.jpeg",
-    description: "Top-tier dyed fabrics including Polyester and Viscose. Perfect for industrial use and premium fashion."
+    description: "Top tier dyed and RFD fabrics including Polyester, Nylon, Viscose, PV, NV and Pure fabrics."
   },
   {
     id: 2,
-    title: "Exquisite Sarees",
+    title: "Exquisite Lehngas",
     image: "/assets/saree.jpeg",
-    description: "Intricate weaves and bridal collections. Featuring velvet, silk blends, and rich georgettes."
+    description: "Intricate weaves and bridal collections. Lehngas in velvet, silk blends, and rich georgettes."
   },
   {
     id: 3,
@@ -21,9 +21,33 @@ const products = [
   },
   {
     id: 4,
-    title: "Premium Shirting",
+    title: "Premium Printing",
     image: "/assets/shirting.jpeg",
     description: "Crisp cottons and durable blends for the modern gentleman. Digital and mill prints available."
+  },
+  {
+    id: 5,
+    title: "Imported Fabrics",
+    image: "/assets/imported-fabrics.png",
+    description: "Premium imported bases with intricate beadwork, sequins, and embroidery. Ideal for bridal and occasion wear."
+  },
+  {
+    id: 6,
+    title: "Position Prints",
+    image: "/assets/position-prints.png",
+    description: "Strategically placed motifs and all-over embroidered designs. Florals, zardozi, and mill-fresh patterns."
+  },
+  {
+    id: 7,
+    title: "Dupattas",
+    image: "/assets/dupattas.png",
+    description: "Sheer ombres and delicate bases with position prints, sequins, and lace borders. Perfect pairing for lehngas."
+  },
+  {
+    id: 8,
+    title: "Laces",
+    image: "/assets/laces.png",
+    description: "Floral and botanical laces in varied shades. Embroidered nets and borders for dupattas and ethnic wear."
   }
 ];
 

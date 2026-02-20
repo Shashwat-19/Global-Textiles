@@ -6,7 +6,12 @@ const galleryItems = [
   { id: 1, type: 'image', src: '/assets/gallery_upload_1.jpg', title: 'Exclusive Collection', subtitle: 'Hand-picked designs for the elite' },
   { id: 2, type: 'image', src: '/assets/gallery_upload_2.jpg', title: 'Premium Textures', subtitle: 'Feel the difference in every thread', span: 'col-span-2' },
   { id: 3, type: 'image', src: '/assets/gallery_upload_3.jpg', title: 'Artisanal Weaves', subtitle: 'Traditional techniques, modern appeal' },
-  { id: 4, type: 'image', src: 'https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=800&q=80', title: 'Vibrant Textiles', subtitle: 'Colors that bring your vision to life' },
+  { id: 4, type: 'image', src: '/assets/imported-fabrics.png', title: 'Imported Fabrics', subtitle: 'Beadwork, sequins and embroidery for occasion wear' },
+  { id: 5, type: 'image', src: '/assets/position-prints.png', title: 'Position Prints', subtitle: 'Florals, zardozi and mill-fresh patterns' },
+  { id: 6, type: 'image', src: '/assets/dupattas.png', title: 'Dupattas', subtitle: 'Sheer ombres with position prints and lace borders' },
+  { id: 7, type: 'image', src: '/assets/laces.png', title: 'Laces', subtitle: 'Floral and botanical laces for ethnic wear' },
+  { id: 8, type: 'image', src: '/assets/fabric.jpeg', title: 'Fine Fabrics', subtitle: 'Dyed and RFD fabrics in every blend' },
+  { id: 9, type: 'image', src: '/assets/saree.jpeg', title: 'Lehngas', subtitle: 'Bridal and occasion wear in velvet and georgettes' },
 ];
 
 const Gallery = () => {
