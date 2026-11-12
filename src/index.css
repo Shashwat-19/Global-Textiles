@@ -1,42 +1,166 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Bricolage Grotesque: ink-trap grotesque with optical sizing; system fonts as fallback. */
+
 @layer base {
   html {
     scroll-behavior: smooth;
-  }
-  
-  body {
-    @apply bg-stone-50 text-stone-800 antialiased selection:bg-amber-600 selection:text-white;
+    -webkit-text-size-adjust: 100%;
   }
 
-  /* Custom Scrollbar for Webkit */
+  body {
+    @apply bg-stone-50 text-stone-800 antialiased selection:bg-amber-600 selection:text-white;
+    font-feature-settings: "kern", "liga", "calt";
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0;
+    line-height: 1.5;
+  }
+
+  /* Size-specific tracking: headings tighten as they grow, body stays near 0 */
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    font-optical-sizing: auto;
+  }
+
+  ::selection {
+    background-color: rgb(217 119 6 / 0.9);
+    color: #fff;
+  }
+
+  /* Scrollbars */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
+    height: 10px;
   }
-  
+
   ::-webkit-scrollbar-track {
-    @apply bg-stone-100;
+    background: transparent;
   }
-  
+
   ::-webkit-scrollbar-thumb {
-    @apply bg-stone-400 rounded-full hover:bg-stone-500 transition-colors;
+    background-color: rgb(168 162 158 / 0.5);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    border-radius: 9999px;
+    transition: background-color 200ms ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(120 113 108 / 0.7);
+  }
+
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(168 162 158 / 0.6) transparent;
   }
 }
 
 @layer utilities {
+  /* Translucent materials: bright top edge = light catching the surface */
+  .material,
   .glass {
-    @apply bg-white/70 backdrop-blur-md border-b border-white/30;
+    background-color: rgb(250 246 238 / 0.74);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    backdrop-filter: blur(20px) saturate(180%);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.7),
+      0 1px 2px rgb(28 25 23 / 0.04),
+      0 8px 24px -12px rgb(28 25 23 / 0.12);
   }
-  
+
   .glass-dark {
-    @apply bg-black/60 backdrop-blur-md border border-white/10;
+    background-color: rgb(12 10 9 / 0.6);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    backdrop-filter: blur(20px) saturate(160%);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.12),
+      0 12px 32px -16px rgb(0 0 0 / 0.5);
   }
 
   .text-shadow {
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 0 1px 2px rgb(0 0 0 / 0.12), 0 2px 12px rgb(0 0 0 / 0.08);
+  }
+
+  /* Display type: negative tracking and tight leading */
+  .tracking-display {
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    font-optical-sizing: auto;
+  }
+
+  /* Instant press feedback on pointer-down, no waiting for release */
+  .press {
+    transition: transform 100ms ease-out, opacity 100ms ease-out;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .press:active {
+    transform: scale(0.97);
+  }
+}
+
+/* Reduced motion: keep opacity/color cues, drop slides, springs and smooth scrolling */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 200ms !important;
+    transition-timing-function: ease !important;
+  }
+
+  .press:active {
+    transform: none;
+    opacity: 0.8;
+  }
+}
+
+/* Reduced transparency: solid surfaces, no blur */
+@media (prefers-reduced-transparency: reduce) {
+  .material,
+  .glass {
+    background-color: #faf6ee;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .glass-dark {
+    background-color: #1c1917;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+/* More contrast: near-solid surfaces with a defined edge */
+@media (prefers-contrast: more) {
+  .material,
+  .glass {
+    background-color: #faf6ee;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: inset 0 0 0 1px #292524;
+  }
+
+  .glass-dark {
+    background-color: #000;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: inset 0 0 0 1px #fff;
+  }
+
+  .text-shadow {
+    text-shadow: none;
   }
 }

@@ -7,21 +7,40 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Outfit', 'sans-serif'],
-        display: ['Playfair Display', 'serif'],
+        sans: [
+          '"Bricolage Grotesque"',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'system-ui',
+          '"SF Pro Text"',
+          '"Segoe UI"',
+          'Roboto',
+          'sans-serif',
+        ],
+        display: [
+          '"Bricolage Grotesque"',
+          '"SF Pro Display"',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'system-ui',
+          '"Segoe UI"',
+          'Roboto',
+          'sans-serif',
+        ],
       },
       colors: {
         stone: {
-          50: '#fafaf9',
-          100: '#f5f5f4',
-          200: '#e7e5e4',
-          300: '#d6d3d1',
-          400: '#a8a29e',
-          500: '#78716c',
-          600: '#57534e',
-          700: '#44403c',
-          800: '#292524',
-          900: '#1c1917',
+          50: '#faf6ee',
+          100: '#f4ede0',
+          200: '#e9dfcc',
+          300: '#d9cbb2',
+          400: '#b3a58c',
+          500: '#8a7d68',
+          600: '#6b5f4d',
+          700: '#514839',
+          800: '#3a3329',
+          900: '#2a251e',
+          950: '#1d1913',
         }
       }
     },

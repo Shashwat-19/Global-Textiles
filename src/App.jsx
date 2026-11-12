@@ -1,21 +1,24 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
-import Hero from './components/Hero';
-import About from './components/About';
-import WhyChooseUs from './components/WhyChooseUs';
-import Products from './components/Products';
-import Gallery from './components/Gallery';
-import Contact from './components/Contact';
+import Home from './pages/Home';
+import AboutPage from './pages/AboutPage';
+import ProductsPage from './pages/ProductsPage';
+import GalleryPage from './pages/GalleryPage';
+import ContactPage from './pages/ContactPage';
 
 function App() {
   return (
-    <Layout>
-      <Hero />
-      <About />
-      <WhyChooseUs />
-      <Products />
-      <Gallery />
-      <Contact />
-    </Layout>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
